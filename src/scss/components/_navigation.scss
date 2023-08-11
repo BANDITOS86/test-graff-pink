@@ -1,0 +1,56 @@
+.nav {
+  width: 100%;
+
+  & .close {
+    display: none;
+  }
+
+  &__list {
+    padding-top: 7px;
+    width: 342px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color-charcoal);
+    transition: color .3s ease-in-out;
+
+    &:focus-visible {
+      color: var(--color-red);
+    }
+
+    &:hover {
+      color: var(--color-red);
+    }
+
+    &:active {
+      color: var(--color-persian-red);
+    }
+  }
+
+  @include small-tablet {
+    & {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    & .close {
+      display: block;
+    }
+
+    &__list {
+      padding-top: 0;
+      flex-direction: column;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+  }
+}
