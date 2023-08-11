@@ -1,0 +1,10 @@
+.close {
+  width: 34px;
+  height: 34px;
+
+  &__image {
+    width: 34px;
+    height: 34px;
+    fill: var(--color-old-rose);
+  }
+}
